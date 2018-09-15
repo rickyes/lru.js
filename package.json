@@ -1,0 +1,23 @@
+{
+  "name": "x-lru",
+  "version": "0.0.1",
+  "description": "Simplified LRU Cache based on HashMap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickyes/x-lru.git"
+  },
+  "keywords": [
+    "lru",
+    "hash"
+  ],
+  "author": "Ricky 泽阳",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rickyes/x-lru/issues"
+  },
+  "homepage": "https://github.com/rickyes/x-lru#readme"
+}
