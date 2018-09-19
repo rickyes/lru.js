@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Simplified LRU Cache based on HashMap",
   "main": "index.js",
+  "typings": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/rickyes/x-lru/issues"
   },
-  "homepage": "https://github.com/rickyes/x-lru#readme"
+  "homepage": "https://github.com/rickyes/x-lru#readme",
+  "dependencies": {
+    "lucky.js": "^0.0.4"
+  },
+  "devDependencies": {
+    "tap": "^12.0.1"
+  }
 }
