@@ -12,8 +12,19 @@ Simplified LRU Cache based on [Lucky.js](https://github.com/rickyes/lucky.js)
 $ npm i x-lru --save
 ```
 
+## API
+所有LRU模式的API都是相同的。
+### 1、`length: number`
+获取LRU的长度
+### 2、`set(key: string, value: any): void`
+添加LRU元素
+### 3、`get(key: string): any`
+获取元素，命中key的元素会移动至LRU的头部
+### 4、`peek(): {key: string, value: any}`
+获取LRU头部元素，但不会删除
+
 ## Features
-- [ ] LRU-1
+- [x] LRU-1
 - [ ] LRU-2
 - [ ] MultiQueue
 - [ ] TwoQueues
