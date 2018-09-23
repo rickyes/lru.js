@@ -17,7 +17,7 @@ $ npm i x-lru --save
 ### 1、`length: number`
 获取LRU的长度
 ### 2、`set(key: string, value: any): void`
-添加LRU元素
+添加LRU元素，新增的元素会插入到LRU的头部
 ### 3、`get(key: string): any`
 获取元素，命中key的元素会移动至LRU的头部
 ### 4、`peek(): {key: string, value: any}`
