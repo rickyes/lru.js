@@ -1,0 +1,12 @@
+language: node_js
+sudo: false
+node_js:
+- "8"
+- "10"
+install:
+- npm install -g codecov tap
+- make install
+script:
+- make cov
+after_script:
+- tap --coverage-report=text-lcov > coverage.lcov && codecov
