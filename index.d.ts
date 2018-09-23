@@ -3,6 +3,7 @@ declare namespace XLRU {
     length: number;
     set(key: string, value: any): void;
     get(key: string): any;
+    peek(): {key: string, value: any};
   }
 
   interface LRU2 {
