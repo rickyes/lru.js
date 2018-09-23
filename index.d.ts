@@ -1,5 +1,8 @@
 declare namespace XLRU {
   interface LRU {
+    length: number;
+    set(key: string, value: any): void;
+    get(key: string): any;
   }
 
   interface LRU2 {
@@ -12,7 +15,7 @@ declare namespace XLRU {
   }
   
   interface LRUFactory {
-    new (): LRU;
+    new ({maxSize: number}): LRU;
   }
 
   interface LRU2Factory {

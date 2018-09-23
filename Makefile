@@ -4,9 +4,9 @@ install:
 	@npm i --registry=https://registry.npm.taobao.org
 
 unit:
-	@$(TAP) -j4 test.js
+	@$(TAP) -j4 test/*
 
 cov:
-	@$(TAP) -j4 test.js --cov
+	@$(TAP) -j4 test/* --cov
 
 .PHONY: install
