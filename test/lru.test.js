@@ -12,7 +12,7 @@ test('constructor', t => {
 });
 
 test('set', t => {
-  const lru = new LRU({maxSize: 10});
+  const lru = new LRU({maxSize: 2});
   let size = lru.length;
   t.equal(size, 0);
   lru.set('one', 1);
@@ -26,6 +26,7 @@ test('set', t => {
   } catch (error) {
     t.equal(error.message, 'true is not string');
   }
+  lru.set('three', 3);
   t.end();
 });
 
