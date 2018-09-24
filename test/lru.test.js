@@ -5,9 +5,14 @@ const {LRU} = require('..');
 const test = tap.test;
 
 test('constructor', t => {
-  const lru = new LRU({maxSize: 1000});
+  let lru = new LRU({maxSize: 1000});
   const size = lru.length;
   t.equal(size, 0);
+  try {
+    lru = new LRU({maxSize: 1});
+  } catch (error) {
+    t.equal(error.message, 'maxSize is less than or equal to 1');
+  }
   t.end();
 });
 
@@ -57,5 +62,8 @@ test('get', t => {
   t.equal(value, 1);
   head = lru.peek();
   t.equal(head.key, 'one');
+  
+  value = lru.get('four');
+  t.equal(value, null);
   t.end();
 });
